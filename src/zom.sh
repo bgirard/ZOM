@@ -29,11 +29,11 @@ function help {
   echo ""
   for i in $COMMAND_HOME/commands/*
   do
+    COMMAND_BIN=$i/bin/command
     if [ ! -e "$COMMAND_BIN" ]
     then
       break
     fi
-    COMMAND_BIN=$i/bin/command
     printf "  %-20s %s\n" "$(basename $i)" "$(COMMAND_HOME=$i $COMMAND_BIN -description)"
   done
   return
