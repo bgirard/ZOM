@@ -5,7 +5,7 @@ function complete {
 }
 
 function run_command {
-  echo $COMMAND_HOME
+  echo $COMMAND_HOME " not implemented"
   return
 }
 

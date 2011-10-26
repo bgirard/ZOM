@@ -4,9 +4,10 @@ absdir=`dirname "$abspath"`
 
 for i in "commands"/*
 do
-  if [ ! -a $absdir/${i} ]
+  if [ ! -d $absdir/${i} ]
   then
-    return
+    echo "Warning: No commands for command container: " $absdir/${i}
+    exit
   fi
   if [ $1 == "clean" ]
   then

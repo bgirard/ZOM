@@ -17,7 +17,7 @@ function run_command {
   fi
   if [ ! -e "$COMMAND_BIN" ]
   then
-    echo "Commandz$COMMAND_BIN does not exists"
+    echo "Command $COMMAND_BIN does not exists"
     return
   fi
   #echo "COMMAND_HOME=$COMMAND_HOME/commands/$COMMAND $COMMAND_BIN $IS_COMPLETE$IS_HELP "$@"" >/dev/stderr
