@@ -4,11 +4,15 @@ absdir=`dirname "$abspath"`
 
 for i in "commands"/*
 do
+  if [ ! -a $absdir/${i} ]
+  then
+    return
+  fi
   if [ $1 == "clean" ]
   then
-    echo "Cleaning: $i"
+    echo "Cleaning: $PWD/$i"
   else
-    echo "Building: $i"
+    echo "Building: $PWD/$i"
   fi
   cd $absdir/${i} && make $@
 done

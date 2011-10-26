@@ -44,6 +44,8 @@ function run_command {
       cp -r $COMMAND_HOME/data/bash_command/* $PWD/$NEW_CMD_NAME
     else
       cp -r $COMMAND_HOME/data/container_command/* $PWD/$NEW_CMD_NAME
+      mkdir $PWD/$NEW_CMD_NAME/commands
+      mkdir $PWD/$NEW_CMD_NAME/src
     fi
   fi
   return
