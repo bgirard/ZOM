@@ -1,0 +1,10 @@
+ZOM
+===
+
+This project provides a list of tools useful to Mozilla Platform Developers. It aggregates useful platform tools, provide a consistent environment for these tools to work under and provides command help and completion.
+
+Contributing
+------------
+
+Go ahead. Fork it and send pull requests.
+
