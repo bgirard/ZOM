@@ -18,6 +18,13 @@ function print_help {
 }
 
 function run_command {
+  if [ "$(basename $PWD)" != "commands" ]
+  then
+    echo "Current directory is not a commands directory"
+    echo "HELP:"
+    print_help
+    return
+  fi
   echo "Enter the name of the command you would like to create"
   read NEW_CMD_NAME
   echo "What type of command would you like to create?"
